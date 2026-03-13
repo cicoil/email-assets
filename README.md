@@ -2,6 +2,24 @@
 
 Publicly hosted images for email signatures used by CicoilSuite.
 
+## Source Files
+
+The original PNGs come from the CicoilCore repo:
+
+```
+CicoilCore/CicoilSuite.Core/Assets/
+├── Logos/    → uploaded to logos/ here
+└── Social/  → uploaded to social/ here
+```
+
+If you add a new logo or icon to `CicoilSuite.Core/Assets/`, upload a copy here too so the hosted URL is available for mobile signatures.
+
+## How It's Used
+
+- **In-app preview**: Uses embedded `data:` URIs (from `EmbeddedAssets.cs`)
+- **Clipboard copy**: Uses hosted URLs from this repo (via `EmbeddedAssets.GetLogo/Social/ContactIconHostedUrl()`)
+- **Why**: Mobile Outlook blocks `data:` URIs — hosted `https://` URLs work everywhere
+
 ## Base URL
 
 ```
